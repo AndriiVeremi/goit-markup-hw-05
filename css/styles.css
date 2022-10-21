@@ -122,10 +122,19 @@ body {
   display: inline-flex;
   padding-top: 32px;
   padding-bottom: 32px;
+  
   font-weight: 500;
   font-size: 14px;
   line-height: 1.1;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.02em; 
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-menu-link:hover,
+.header-menu-link:focus,
+.header-contact-link:hover,
+.header-contact-link:focus {
+  color: var(--blue-primary);
 }
 
 .icon-mail,
@@ -138,13 +147,6 @@ body {
 .icon-mail:hover,
 .icon-tel:hover {
   fill: var(--blue-primary);
-}
-
-.header-menu-link:hover,
-.header-menu-link:focus,
-.header-contact-link:hover,
-.header-contact-link:focus {
-  color: var(--blue-primary);
 }
 
 /* СТИЛІ ГОЛОВНОГО БЛОКА */
@@ -365,11 +367,12 @@ body {
   background-color: var(--white-color-text);
   height: 44px;
   cursor: pointer;
+  border-radius: 50%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-btn:hover {
   background-color: var(--blue-primary);
-  border-radius: 50%;
   fill: var(--white-color-text);
 }
 
@@ -377,6 +380,7 @@ body {
   width: 44px;
   padding: 12px;
   fill: currentColor;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-icon:hover {
@@ -411,11 +415,13 @@ body {
   cursor: pointer;
   border: 1px solid var(--default-color-icon);
   border-radius: 4px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-icon {
   height: 92px;
   width: 170px;
   fill: currentColor;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon:hover {
@@ -467,6 +473,7 @@ body {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--white-color-text);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-adres-item:last-child {
@@ -478,6 +485,7 @@ body {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-adres-item:hover,
@@ -511,6 +519,7 @@ body {
   border-radius: 50%;
   height: 44px;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover {
@@ -539,6 +548,10 @@ body {
   margin-bottom: 50px;
 }
 
+.portfolio-item {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio-item:not(:last-child) {
   margin-right: 8px;
 }
@@ -564,6 +577,7 @@ body {
   line-height: 1.6;
   letter-spacing: 0.03em;
   text-align: center;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-btn:hover,
@@ -583,6 +597,7 @@ body {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-foto {
