@@ -112,6 +112,10 @@ body {
   color: var(--secondory-color-text);
 }
 
+.item {
+  position: relative;
+}
+
 .header-menu .item:not(:last-child),
 .header-contact .item:not(:last-child) {
   margin-right: 50px;
@@ -128,6 +132,26 @@ body {
   line-height: 1.1;
   letter-spacing: 0.02em; 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-menu-link::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  
+  background-color: var(--blue-primary);
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.current::after,
+.header-menu-link:hover::after,
+.header-menu-link:focus::after {
+  opacity: 1;
 }
 
 .header-menu-link:hover,
@@ -381,7 +405,7 @@ body {
   width: 44px;
   padding: 12px;
   fill: currentColor;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);             
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);             
 }
 
 .button-icon:hover {
@@ -416,13 +440,13 @@ body {
   cursor: pointer;
   border: 1px solid var(--default-color-icon);
   border-radius: 4px;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-icon {
   height: 92px;
   width: 170px;
   fill: currentColor;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon:hover {
@@ -613,6 +637,7 @@ body {
 
 .item-foto {
  position: relative;
+ overflow: hidden; 
 }
 
 .item-foto::before {
@@ -624,11 +649,27 @@ body {
   height: 100%;
   
   background: rgba(33, 150, 243, 0.9);
-  opacity: 0;
+  opacity: 1;
+  
 }
 
 .item-foto:hover::before {
   opacity: 1;
+  animation-name: fon; 
+  animation-duration: 250ms; 
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-direction: reverse;
+}
+
+@keyframes fon {
+  
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
 }
 
 .portfolio-item-info {
@@ -645,10 +686,13 @@ body {
   color: #FFFFFF;
   
   opacity: 0;
+  
 }
 
 .portfolio-item-info:hover {
+  
   opacity: 1;
+ 
 }
 
 .portfolio-descript {
