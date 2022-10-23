@@ -684,16 +684,14 @@ body {
 }
 
 .portfolio-work p {
-  margin-top: 0;
-  margin-bottom: 0;
-
+  margin: 0;
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.03em;
   color: var(--secondory-color-text);
 }
 
-/* СТИЛІ МОДАЛЬНОГО ВІКНО */
+/* СТИЛІ МОДАЛЬНОГО ВІКНА */
 
 .backdrop {
   position: fixed;
@@ -712,10 +710,10 @@ body {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.9);
+  transform: translate(-50%, -50%) scale(0.8);
 }
 
-.modal {
+.modal { 
   position: absolute;
   top: 50%;
   left: 50%;
@@ -725,4 +723,17 @@ body {
   
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--duration-function) var(--timing-function);
+}
+
+.madal-btn {
+  display: flex;
+  margin: 50% auto;
+  padding: 10px 32px;
+  background-color: var(--blue-primary);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--white-color-text);
+  border: 1px solid transparent;
 }
