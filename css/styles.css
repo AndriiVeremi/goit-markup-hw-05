@@ -125,12 +125,12 @@ body {
   color: var(--secondory-color-text);
 }
 
-.item {
+.header-item {
   position: relative;
 }
 
-.header-menu .item:not(:last-child),
-.header-contact .item:not(:last-child) {
+.header-menu .header-item:not(:last-child),
+.header-contact .header-item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -255,7 +255,7 @@ body {
   background-image: url(../images/icons/astronaut.svg);
 }
 
-.info-item-title {
+.info-title {
   margin-bottom: 10px;
   font-size: 14px;
   line-height: 1;
@@ -300,6 +300,8 @@ body {
   background: rgba(47, 48, 58, 0.8);
   padding-top: 27px;
   padding-bottom: 27px;
+  margin: 0;
+
 
   font-size: 14px;
   line-height: 16px;
@@ -566,6 +568,11 @@ body {
   margin-bottom: 50px;
 }
 
+.portfolio-item {
+  border-radius: 4px;
+  transition: box-shadow var(--duration-function) var(--timing-function);
+}
+
 .portfolio-item:not(:last-child) {
   margin-right: 8px;
 }
@@ -723,17 +730,24 @@ body {
   
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--duration-function) var(--timing-function);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+              0px 1px 1px rgba(0, 0, 0, 0.14), 
+              0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .madal-btn {
   display: flex;
-  margin: 50% auto;
-  padding: 10px 32px;
-  background-color: var(--blue-primary);
-  border-radius: 4px;
+  background-color: #FFFFFF;
+  background-image: url(../images/icons/close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
   cursor: pointer;
-  font-size: 16px;
-  line-height: 1.8;
-  color: var(--white-color-text);
-  border: 1px solid transparent;
+  height:30px; 
+  width: 30px;
+  margin-left: 490px;
+  margin-top: 8px;
+  
 }
